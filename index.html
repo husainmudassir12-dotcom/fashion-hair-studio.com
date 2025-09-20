@@ -476,14 +476,13 @@
                 <a href="#" class="text-gray-400 hover:text-white mx-3"><i class="fab fa-whatsapp"></i></a>
             </div>
             <p>&copy; 2024 Fashion Hair Studio. All Rights Reserved.</p>
-             <p class="text-sm mt-4">Visitors: <span id="visitor-count">0</span></p>
         </div>
     </footer>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
         import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, collection, addDoc, onSnapshot, query, doc, getDoc, setDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { getFirestore, collection, addDoc, onSnapshot, query } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
         // Global variables provided by the Canvas environment
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
@@ -517,11 +516,9 @@
 
             if (userId) {
                 setupAppointmentsListener();
-                trackVisitor();
             }
         });
-        
-        // Function to set up the real-time listener for appointments
+
         function setupAppointmentsListener() {
             const appointmentsList = document.getElementById('appointments-list');
             const q = query(collection(db, `/artifacts/${appId}/public/data/appointments`));
@@ -638,62 +635,6 @@
             messageBox.classList.remove('visible', 'opacity-100');
             messageBox.classList.add('invisible', 'opacity-0');
         });
-
-        // --- Visitor Tracking Logic ---
-        const visitorCountElement = document.getElementById('visitor-count');
-        const visitorCounterDocRef = doc(db, `/artifacts/${appId}/public/data/visitors/counter`);
-        const sessionKey = `visitor-tracked-${appId}`;
-
-        // Function to fetch and display the current visitor count
-        async function getVisitorCount() {
-            try {
-                const docSnap = await getDoc(visitorCounterDocRef);
-                if (docSnap.exists()) {
-                    const data = docSnap.data();
-                    visitorCountElement.textContent = data.count || 0;
-                } else {
-                    visitorCountElement.textContent = 0;
-                }
-            } catch (error) {
-                console.error("Error getting visitor count:", error);
-            }
-        }
-
-        // Function to increment the visitor count
-        async function trackVisitor() {
-            // Check if this visitor has already been tracked in this session
-            if (sessionStorage.getItem(sessionKey)) {
-                return;
-            }
-
-            try {
-                // Get the current document to see if it exists
-                const docSnap = await getDoc(visitorCounterDocRef);
-                if (docSnap.exists()) {
-                    // Document exists, increment the count
-                    await updateDoc(visitorCounterDocRef, {
-                        count: increment(1)
-                    });
-                } else {
-                    // Document doesn't exist, create it with count 1
-                    await setDoc(visitorCounterDocRef, {
-                        count: 1
-                    });
-                }
-
-                // Set a flag in session storage to avoid double-counting on reload
-                sessionStorage.setItem(sessionKey, 'true');
-            } catch (error) {
-                console.error("Error tracking visitor:", error);
-            } finally {
-                // Always get the updated count after the operation
-                getVisitorCount();
-            }
-        }
-
-        // Run functions on page load
-        getVisitorCount();
-        trackVisitor();
 
     </script>
 
