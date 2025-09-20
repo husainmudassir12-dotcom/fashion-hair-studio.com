@@ -6,18 +6,18 @@
     <title>Fashion Hair Studio - Premium Barber Shop in Pune</title>
     <meta name="description" content="Fashion Hair Studio by Arun Kumar in Pirangut, Pune. We offer premium hair cuts, beard styling, facials, and grooming packages.">
     <meta name="keywords" content="barber shop, hair studio, haircut, beard trim, grooming, Arun Kumar, Pirangut, Pune, Lavale Phata">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Google Fonts: Playfair Display & Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    
     <style>
         /* NEW THEME - Inspired by Looks Salon */
         body {
@@ -119,6 +119,11 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Modal styling */
+        .modal {
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
     </style>
 </head>
 <body class="bg-white">
@@ -127,7 +132,7 @@
     <header class="fixed top-0 left-0 w-full z-50">
         <nav class="container mx-auto px-6 py-5 flex justify-between items-center">
             <a href="#" class="brand-title text-2xl font-serif font-bold transition-colors duration-300">
-                <img src="https://i.postimg.cc/j52schfy/Gemini-Generated-Image-pg2b7wpg2b7wpg2b.png" alt="Fashion Hair Studio Logo" class="h-10 w-auto">
+                <img src="https://i.postimg.cc/j52schfy/Gemini-Generated-Image-pg2b7wpg2b7wpg2b.png" alt="Fashion Hair Studio Logo" class="h-10 w-auto header-logo">
             </a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#services" class="text-white hover:text-brand transition">Services</a>
@@ -136,7 +141,7 @@
                 <a href="#about" class="text-white hover:text-brand transition">About</a>
                 <a href="#testimonials" class="text-white hover:text-brand transition">Testimonials</a>
                 <a href="#contact" class="text-white hover:text-brand transition">Contact</a>
-                <a href="#contact" class="bg-white text-black py-2 px-5 rounded-full font-semibold hover:bg-gray-200 transition">Book Appointment</a>
+                <a href="#booking" class="bg-white text-black py-2 px-5 rounded-full font-semibold hover:bg-gray-200 transition">Book Appointment</a>
             </div>
             <div class="md:hidden">
                 <button id="menu-btn" class="text-white focus:outline-none">
@@ -152,7 +157,7 @@
             <a href="#about" class="block py-3 px-6 text-gray-700 hover:bg-gray-50">About</a>
             <a href="#testimonials" class="block py-3 px-6 text-gray-700 hover:bg-gray-50">Testimonials</a>
             <a href="#contact" class="block py-3 px-6 text-gray-700 hover:bg-gray-50">Contact</a>
-            <a href="#contact" class="block py-3 px-6 bg-gray-100 font-semibold text-center">Book Appointment</a>
+            <a href="#booking" class="block py-3 px-6 bg-gray-100 font-semibold text-center">Book Appointment</a>
         </div>
     </header>
 
@@ -220,7 +225,7 @@
                             <p class="text-xl font-bold text-brand">₹180</p>
                         </div>
                     </div>
-                     <!-- Service Card 4 -->
+                    <!-- Service Card 4 -->
                     <div class="bg-white rounded-lg text-center shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                         <img src="https://i.postimg.cc/YCHDzsHm/Whats-App-Image-2025-09-07-at-23-46-38.jpg" alt="Hair Coloring" class="w-full h-56 object-cover object-contain" style="object-fit: contain;">
                         <div class="p-8">
@@ -229,7 +234,7 @@
                             <p class="text-xl font-bold text-brand">From ₹500</p>
                         </div>
                     </div>
-                     <!-- Service Card 5 -->
+                    <!-- Service Card 5 -->
                     <div class="bg-white rounded-lg text-center shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                         <img src="https://i.postimg.cc/NGnxpP1j/Whats-App-Image-2025-09-07-at-23-47-19-1.jpg" alt="Cleansing Facial" class="w-full h-56 object-cover object-contain" style="object-fit: contain;">
                         <div class="p-8">
@@ -238,7 +243,7 @@
                             <p class="text-xl font-bold text-brand">₹800</p>
                         </div>
                     </div>
-                     <!-- Service Card 6 -->
+                    <!-- Service Card 6 -->
                     <div class="bg-white rounded-lg text-center shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                         <img src="https://i.postimg.cc/T1vnvBQV/Whats-App-Image-2025-09-07-at-23-48-26.jpg" alt="Head Massage" class="w-full h-56 object-cover object-contain" style="object-fit: contain;">
                         <div class="p-8">
@@ -262,21 +267,21 @@
                         <h3 class="text-2xl font-semibold mb-4">The Classic</h3>
                         <p class="text-gray-500 mb-6">Haircut + Beard Trim</p>
                         <p class="text-4xl font-bold text-gray-900 mb-6">₹300 <span class="text-lg text-gray-400 line-through">₹350</span></p>
-                        <a href="#contact" class="btn-primary py-2 px-8 rounded-full">Book Now</a>
+                        <a href="#booking" class="btn-primary py-2 px-8 rounded-full">Book Now</a>
                     </div>
                     <!-- Package Card 2 (Featured) -->
                     <div class="bg-white rounded-lg p-10 text-center border-2 border-brand shadow-2xl">
                         <h3 class="text-3xl font-serif font-bold mb-4">The Gentleman</h3>
                         <p class="text-gray-500 mb-6">Haircut + Hot Towel Shave</p>
                         <p class="text-5xl font-bold text-gray-900 mb-6">₹350 <span class="text-lg text-gray-400 line-through">₹380</span></p>
-                        <a href="#contact" class="btn-primary py-3 px-10 rounded-full text-lg">Book Now</a>
+                        <a href="#booking" class="btn-primary py-3 px-10 rounded-full text-lg">Book Now</a>
                     </div>
                     <!-- Package Card 3 -->
                     <div class="bg-gray-50 rounded-lg p-8 text-center border">
                         <h3 class="text-2xl font-semibold mb-4">The Royal Treatment</h3>
                         <p class="text-gray-500 mb-6">Haircut + Beard Trim + Facial</p>
                         <p class="text-4xl font-bold text-gray-900 mb-6">₹1100 <span class="text-lg text-gray-400 line-through">₹1250</span></p>
-                        <a href="#contact" class="btn-primary py-2 px-8 rounded-full">Book Now</a>
+                        <a href="#booking" class="btn-primary py-2 px-8 rounded-full">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -309,7 +314,58 @@
                         <p class="text-gray-600 mb-6 leading-relaxed">
                             With over 15 years of experience, Arun Kumar founded Fashion Hair Studio with a simple vision: to create a space where men can enjoy premium grooming services in a relaxed and friendly atmosphere. His passion for precision and dedication to his craft are evident in every cut and shave.
                         </p>
-                        <a href="#contact" class="font-semibold text-brand hover:text-black">Book an Appointment <i class="fas fa-arrow-right ml-2"></i></a>
+                        <a href="#booking" class="font-semibold text-brand hover:text-black">Book an Appointment <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section (New) -->
+        <section id="booking" class="py-20 md:py-32 bg-gray-50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-4xl text-center mb-4">Book Your Appointment</h2>
+                <p class="text-center text-gray-500 mb-12">Fill out the form below to schedule your visit.</p>
+                <div class="max-w-xl mx-auto bg-white rounded-xl shadow-2xl p-8 md:p-12">
+                    <form id="appointment-form" action="#" method="POST" class="space-y-6">
+                        <!-- Name fields -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <label for="first-name" class="block text-sm font-medium text-gray-700">First Name</label>
+                                <input type="text" name="first-name" id="first-name" autocomplete="given-name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-brand focus:ring-brand">
+                            </div>
+                            <div>
+                                <label for="middle-name" class="block text-sm font-medium text-gray-700">Middle Name</label>
+                                <input type="text" name="middle-name" id="middle-name" autocomplete="additional-name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-brand focus:ring-brand">
+                            </div>
+                            <div>
+                                <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name</label>
+                                <input type="text" name="last-name" id="last-name" autocomplete="family-name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-brand focus:ring-brand">
+                            </div>
+                        </div>
+
+                        <!-- Email field -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <input type="email" name="email" id="email" autocomplete="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-brand focus:ring-brand">
+                        </div>
+
+                        <!-- Mobile Number field -->
+                        <div>
+                            <label for="mobile" class="block text-sm font-medium text-gray-700">Mobile Number</label>
+                            <input type="tel" name="mobile" id="mobile" autocomplete="tel" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-brand focus:ring-brand">
+                        </div>
+
+                        <!-- Submit button -->
+                        <div class="text-center">
+                            <button type="submit" class="btn-primary py-3 px-12 rounded-full text-lg">Submit Appointment</button>
+                        </div>
+                    </form>
+                    <div id="message-box" class="modal fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 invisible opacity-0">
+                        <div class="bg-white rounded-lg shadow-xl p-8 m-4 max-w-sm w-full text-center">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Thank You!</h3>
+                            <p class="text-gray-600 mb-6">Your appointment request has been submitted. We will contact you shortly to confirm.</p>
+                            <button id="close-modal-btn" class="btn-primary py-2 px-6 rounded-full">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -359,30 +415,7 @@
                 </div>
             </div>
         </section>
-        
-<form action="https://formspree.io/f/xblanpjy" method="POST">
-  
-  <label for="first-name">First Name:</label>
-  <input type="text" id="first-name" name="first-name" required>
-  
-  <label for="middle-name">Middle Name:</label>
-  <input type="text" id="middle-name" name="middle-name">
-  
-  <label for="last-name">Last Name:</label>
-  <input type="text" id="last-name" name="last-name" required>
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
-  
-  <label for="phone">Phone Number:</label>
-  <input type="tel" id="phone" name="phone">
-
-  <label for="message">Your Message:</label>
-  <textarea id="message" name="message"></textarea>
-
-  <button type="submit">Send</button>
-
-</form>
         <!-- Contact Section -->
         <section id="contact" class="py-20 md:py-32 bg-white fade-in-section">
             <div class="container mx-auto px-6">
@@ -411,7 +444,7 @@
                     <div>
                         <iframe 
                             class="w-full h-96 rounded-lg shadow-lg border"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.136453856885!2d73.7054703148927!3d18.5228519874075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb6a2e52e5d7%3A0x2e5d6e5f1b4a3b2!2sLavale%2C%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1678886453123!5m2!1sen!2sin" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.136453856885!2d73.7054703148927!3d18.5228519874075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb6a2e52e5d7%3A0x2e5d6e5f1b4a3b2!2sLavale%2C%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1678886453123!5m2!1sen!2sin"
                             style="border:0;" 
                             allowfullscreen="" 
                             loading="lazy" 
@@ -484,6 +517,32 @@
         sections.forEach(section => {
             observer.observe(section);
         });
+
+        // Form submission and modal
+        const form = document.getElementById('appointment-form');
+        const messageBox = document.getElementById('message-box');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent default form submission
+
+            // In a real application, you would send this data to a server
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            console.log('Form data:', data);
+
+            // Show success message modal
+            messageBox.classList.remove('invisible', 'opacity-0');
+            messageBox.classList.add('visible', 'opacity-100');
+            
+            form.reset();
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            messageBox.classList.remove('visible', 'opacity-100');
+            messageBox.classList.add('invisible', 'opacity-0');
+        });
+
     </script>
 
 </body>
