@@ -1,545 +1,467 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fashion Hair Studio - Premium Barber Shop in Pune</title>
-    <meta name="description" content="Fashion Hair Studio by Arun Kumar in Pirangut, Pune. We offer premium hair cuts, beard styling, facials, and grooming packages.">
-    <meta name="keywords" content="barber shop, hair studio, haircut, beard trim, grooming, Arun Kumar, Pirangut, Pune, Lavale Phata">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts: Playfair Display & Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Hair Studio - Premium Barber Shop in Pune</title>
+    <meta name="description" content="Fashion Hair Studio by Arun Kumar in Pirangut, Pune. We offer premium hair cuts, beard styling, facials, and grooming packages.">
+    <meta name="keywords" content="barber shop, hair studio, haircut, beard trim, grooming, Arun Kumar, Pirangut, Pune, Lavale Phata">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Playfair Display & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
-        /* NEW THEME - Inspired by Looks Salon */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #ffffff;
-            color: #333333;
-        }
-        .font-serif {
-            font-family: 'Playfair Display', serif;
-        }
-        .bg-dark { background-color: #0a0a0a; }
-        .text-brand { color: #c5a47e; } /* Bronze-Gold Accent */
-        .border-brand { border-color: #c5a47e; }
-        .btn-primary {
-            background-color: #c5a47e;
-            color: #ffffff;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        .btn-primary:hover {
-            background-color: #b39169;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-        }
-        .hero-title {
-            font-family: 'Playfair Display', serif;
-            font-weight: 900;
-        }
-        
-        /* Header Styling */
-        header {
-            transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-        }
-        header.scrolled {
-            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
-            backdrop-filter: blur(5px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        header.scrolled a {
-            color: #333333;
-        }
-        header.scrolled a:hover {
-            color: #c5a47e;
-        }
-        header.scrolled .brand-title {
-             color: #111827;
-        }
-        .header-logo {
-            filter: brightness(0) invert(1);
-        }
-        header.scrolled .header-logo {
-            filter: none;
-        }
-        
-        /* Gallery Styling */
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-        }
-        .gallery-item img {
-            transition: transform 0.4s ease;
-        }
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.6);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            font-size: 1.25rem;
-            font-weight: 600;
-        }
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
+    <style>
+        /* NEW THEME - Inspired by Looks Salon */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-dark { background-color: #0a0a0a; }
+        .text-brand { color: #c5a47e; } /* Bronze-Gold Accent */
+        .border-brand { border-color: #c5a47e; }
+        .btn-primary {
+            background-color: #c5a47e;
+            color: #ffffff;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .btn-primary:hover {
+            background-color: #b39169;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+        }
+        
+        /* Header Styling */
+        header {
+            transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+        }
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        header.scrolled a {
+            color: #333333;
+        }
+        header.scrolled a:hover {
+            color: #c5a47e;
+        }
+        header.scrolled .brand-title {
+             color: #111827;
+        }
+        .header-logo {
+            filter: brightness(0) invert(1);
+        }
+        header.scrolled .header-logo {
+            filter: none;
+        }
+        
+        /* Gallery Styling */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+        }
+        .gallery-item img {
+            transition: transform 0.4s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
 
-        /* Animation for sections fading in on scroll */
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .fade-in-section.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+        /* Animation for sections fading in on scroll */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body class="bg-white">
 
-    <!-- Header -->
-    <header class="fixed top-0 left-0 w-full z-50">
-        <nav class="container mx-auto px-6 py-5 flex justify-between items-center">
-            <a href="#" class="brand-title text-2xl font-serif font-bold transition-colors duration-300">
-                <img src="https://i.postimg.cc/j52schfy/Gemini-Generated-Image-pg2b7wpg2b7wpg2b.png" alt="Fashion Hair Studio Logo" class="h-10 w-auto">
-            </a>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#services" class="text-white hover:text-brand transition">Services</a>
-                <a href="#packages" class="text-white hover:text-brand transition">Packages</a>
-                <a href="#studio" class="text-white hover:text-brand transition">Our Studio</a>
-                <a href="#about" class="text-white hover:text-brand transition">About</a>
-                <a href="#testimonials" class="text-white hover:text-brand transition">Testimonials</a>
-                <a href="#contact" class="text-white hover:text-brand transition">Contact</a>
-                <a href="#contact" class="bg-white text-black py-2 px-5 rounded-full font-semibold hover:bg-gray-200 transition">Book Appointment</a>
-            </div>
-            <div class="md:hidden">
-                <button id="menu-btn" class="text-white focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white">
-            <a href="#services" class="block py-3 px-6 text-gray-700 hover:bg-gray-50">Services</a>
-            <a href="#packages" class="block py-3 px-6 text-gray-700 hover:bg-gray-50">Packages</a>
-            <a href="#studio" class="block py-3 px-6 text-gray-700 hover:bg-gray-50">Our Studio</a>
-            <a href="#about" class="block py-3 px-6 text-gray-700 hover:bg-gray-50">About</a>
-            <a href="#testimonials" class="block py-3 px-6 text-gray-700 hover:bg-gray-50">Testimonials</a>
-            <a href="#contact" class="block py-3 px-6 text-gray-700 hover:bg-gray-50">Contact</a>
-            <a href="#contact" class="block py-3 px-6 bg-gray-100 font-semibold text-center">Book Appointment</a>
-        </div>
-    </header>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50">
+        <nav class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="#" class="brand-title text-2xl font-serif font-bold transition-colors duration-300">
+                <img src="https://i.postimg.cc/j52schfy/Gemini-Generated-Image-pg2b7wpg2b7wpg2b.png" alt="Fashion Hair Studio Logo" class="h-10 w-auto">
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-white hover:text-brand transition">Services</a>
+                <a href="#packages" class="text-white hover:text-brand transition">Packages</a>
+                <a href="#studio" class="text-white hover:text-brand transition">Our Studio</a>
+                <a href="#about" class="text-white hover:text-brand transition">About</a>
+                <a href="#testimonials" class="text-white hover:text-brand transition">Testimonials</a>
+                <a href="#contact" class="text-white hover:text-brand transition">Contact</a>
+                <a href="#contact" class="bg-white text-black py-2 px-5 rounded-full font-semibold hover:bg-gray-200 transition">Book Appointment</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#services" class="block py-3 px-6 text-gray-700 hover:bg-gray-50">Services</a>
+            <a href="#packages" class="block py-3 px-6 text-gray-700 hover:bg-gray-50">Packages</a>
+            <a href="#studio" class="block py-3 px-6 text-gray-700 hover:bg-gray-50">Our Studio</a>
+            <a href="#about" class="block py-3 px-6 text-gray-700 hover:bg-gray-50">About</a>
+            <a href="#testimonials" class="block py-3 px-6 text-gray-700 hover:bg-gray-50">Testimonials</a>
+            <a href="#contact" class="block py-3 px-6 text-gray-700 hover:bg-gray-50">Contact</a>
+            <a href="#contact" class="block py-3 px-6 bg-gray-100 font-semibold text-center">Book Appointment</a>
+        </div>
+    </header>
 
-    <!-- Main Content -->
-    <main>
+    <!-- Main Content -->
+    <main>
 
-        <!-- Hero Section -->
-        <section id="home" class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://i.postimg.cc/Vk9GZQBc/classic-barbershop-treasures-stockcake.jpg');">
-            <div class="absolute inset-0 bg-black opacity-60"></div>
-            <div class="relative z-10 px-4">
-                <h1 class="hero-title text-5xl md:text-8xl text-white mb-4">Art of Grooming</h1>
-                <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">Where timeless craft meets contemporary style.</p>
-                <a href="#services" class="btn-primary py-3 px-8 rounded-full text-lg">Explore Services</a>
-            </div>
-        </section>
+        <!-- Hero Section -->
+        <section id="home" class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://i.postimg.cc/Vk9GZQBc/classic-barbershop-treasures-stockcake.jpg');">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <div class="relative z-10 px-4">
+                <h1 class="hero-title text-5xl md:text-8xl text-white mb-4">Art of Grooming</h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">Where timeless craft meets contemporary style.</p>
+                <a href="#services" class="btn-primary py-3 px-8 rounded-full text-lg">Explore Services</a>
+            </div>
+        </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-20 md:py-32 bg-white fade-in-section">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2">
-                        <img src="https://i.postimg.cc/dtVdGR7j/Whats-App-Image-2025-09-08-at-00-42-02.jpg" alt="Interior of Fashion Hair Studio" class="rounded-lg shadow-xl w-full">
-                    </div>
-                    <div class="md:w-1/2 text-center md:text-left">
-                        <h2 class="section-title text-4xl mb-4">Welcome to the Studio</h2>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            Founded by Arun Kumar, Fashion Hair Studio is born from a passion for the fine art of barbering. We believe a haircut is more than a service—it's a craft. Our studio in Pirangut is a modern space dedicated to providing a premium grooming experience that leaves you looking sharp and feeling confident.
-                        </p>
-                        <a href="#contact" class="font-semibold text-brand hover:text-black">Find Us in Pirangut, Pune <i class="fas fa-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="py-20 md:py-32 bg-gray-50 fade-in-section">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title text-4xl text-center mb-4">Signature Services</h2>
-                <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">Precision, quality, and style in every service we offer.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service Card 1 -->
-                    <div class="bg-white rounded-lg text-center shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://i.postimg.cc/ZYVycfyD/Untitled-design-1.png" alt="Classic Haircut" class="w-full h-56 object-cover object-contain" style="object-fit: contain;">
-                        <div class="p-8">
-                            <h3 class="text-xl font-semibold mb-2 text-gray-900">Classic Haircut</h3>
-                            <p class="text-gray-600 mb-4">A sharp, stylish cut tailored to your preference.</p>
-                            <p class="text-xl font-bold text-brand">₹200</p>
-                        </div>
-                    </div>
-                    <!-- Service Card 2 -->
-                    <div class="bg-white rounded-lg text-center shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://i.postimg.cc/NFFJBr3s/berad.jpg" alt="Beard Trim & Shape" class="w-full h-56 object-cover object-contain" style="object-fit: contain;">
-                        <div class="p-8">
-                            <h3 class="text-xl font-semibold mb-2 text-gray-900">Beard Sculpting</h3>
-                            <p class="text-gray-600 mb-4">Expert trimming and shaping for a perfect beard line.</p>
-                            <p class="text-xl font-bold text-brand">₹150</p>
-                        </div>
-                    </div>
-                    <!-- Service Card 3 -->
-                    <div class="bg-white rounded-lg text-center shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://i.postimg.cc/mgLNDf4V/Whats-App-Image-2025-09-07-at-23-48-56.jpg" alt="Hot Towel Shave" class="w-full h-56 object-cover object-contain" style="object-fit: contain;">
-                        <div class="p-8">
-                            <h3 class="text-xl font-semibold mb-2 text-gray-900">Hot Towel Shave</h3>
-                            <p class="text-gray-600 mb-4">A traditional shave for the closest, smoothest finish.</p>
-                            <p class="text-xl font-bold text-brand">₹180</p>
-                        </div>
-                    </div>
-                     <!-- Service Card 4 -->
-                    <div class="bg-white rounded-lg text-center shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://i.postimg.cc/YCHDzsHm/Whats-App-Image-2025-09-07-at-23-46-38.jpg" alt="Hair Coloring" class="w-full h-56 object-cover object-contain" style="object-fit: contain;">
-                        <div class="p-8">
-                            <h3 class="text-xl font-semibold mb-2">Hair Coloring</h3>
-                            <p class="text-gray-600 mb-4">Premium color services for a bold new look.</p>
-                            <p class="text-xl font-bold text-brand">From ₹500</p>
-                        </div>
-                    </div>
-                     <!-- Service Card 5 -->
-                    <div class="bg-white rounded-lg text-center shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://i.postimg.cc/NGnxpP1j/Whats-App-Image-2025-09-07-at-23-47-19-1.jpg" alt="Cleansing Facial" class="w-full h-56 object-cover object-contain" style="object-fit: contain;">
-                        <div class="p-8">
-                            <h3 class="text-xl font-semibold mb-2">Cleansing Facial</h3>
-                            <p class="text-gray-600 mb-4">Deep cleansing to refresh and rejuvenate your skin.</p>
-                            <p class="text-xl font-bold text-brand">₹800</p>
-                        </div>
-                    </div>
-                     <!-- Service Card 6 -->
-                    <div class="bg-white rounded-lg text-center shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://i.postimg.cc/T1vnvBQV/Whats-App-Image-2025-09-07-at-23-48-26.jpg" alt="Head Massage" class="w-full h-56 object-cover object-contain" style="object-fit: contain;">
-                        <div class="p-8">
-                            <h3 class="text-xl font-semibold mb-2">Head Massage</h3>
-                            <p class="text-gray-600 mb-4">A relaxing massage to relieve stress and tension.</p>
-                            <p class="text-xl font-bold text-brand">₹250</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Packages Section -->
-        <section id="packages" class="py-20 md:py-32 bg-white fade-in-section">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title text-4xl text-center mb-4">Grooming Packages</h2>
-                <p class="text-center text-gray-500 mb-12">Get the best value with our curated packages.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
-                    <!-- Package Card 1 -->
-                    <div class="bg-gray-50 rounded-lg p-8 text-center border">
-                        <h3 class="text-2xl font-semibold mb-4">The Classic</h3>
-                        <p class="text-gray-500 mb-6">Haircut + Beard Trim</p>
-                        <p class="text-4xl font-bold text-gray-900 mb-6">₹300 <span class="text-lg text-gray-400 line-through">₹350</span></p>
-                        <a href="#contact" class="btn-primary py-2 px-8 rounded-full">Book Now</a>
-                    </div>
-                    <!-- Package Card 2 (Featured) -->
-                    <div class="bg-white rounded-lg p-10 text-center border-2 border-brand shadow-2xl">
-                        <h3 class="text-3xl font-serif font-bold mb-4">The Gentleman</h3>
-                        <p class="text-gray-500 mb-6">Haircut + Hot Towel Shave</p>
-                        <p class="text-5xl font-bold text-gray-900 mb-6">₹350 <span class="text-lg text-gray-400 line-through">₹380</span></p>
-                        <a href="#contact" class="btn-primary py-3 px-10 rounded-full text-lg">Book Now</a>
-                    </div>
-                    <!-- Package Card 3 -->
-                    <div class="bg-gray-50 rounded-lg p-8 text-center border">
-                        <h3 class="text-2xl font-semibold mb-4">The Royal Treatment</h3>
-                        <p class="text-gray-500 mb-6">Haircut + Beard Trim + Facial</p>
-                        <p class="text-4xl font-bold text-gray-900 mb-6">₹1100 <span class="text-lg text-gray-400 line-through">₹1250</span></p>
-                        <a href="#contact" class="btn-primary py-2 px-8 rounded-full">Book Now</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Our Studio Gallery Section -->
-        <section id="studio" class="py-20 md:py-32 bg-white fade-in-section">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title text-4xl text-center mb-4">Our Studio</h2>
-                <p class="text-center text-gray-500 mb-12">Take a look inside our clean and modern space.</p>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="gallery-item rounded-lg"><img src="https://i.postimg.cc/Qx8g0Gz5/Whats-App-Image-2025-09-08-at-00-42-00.jpg" class="w-full h-full object-cover rounded-lg" alt="Studio Interior 1"><div class="gallery-overlay">Welcoming Space</div></div>
-                    <div class="gallery-item rounded-lg"><img src="https://i.postimg.cc/dtVdGR7j/Whats-App-Image-2025-09-08-at-00-42-02.jpg" class="w-full h-full object-cover rounded-lg" alt="Studio Interior 2"><div class="gallery-overlay">Styling Stations</div></div>
-                    <div class="gallery-item rounded-lg"><img src="https://i.postimg.cc/fR694688/Whats-App-Image-2025-09-08-at-00-42-05.jpg" class="w-full h-full object-cover rounded-lg" alt="Studio Interior 3"><div class="gallery-overlay">Comfortable Seating</div></div>
-                    <div class="gallery-item rounded-lg"><img src="https://i.postimg.cc/85GfcLQW/Whats-App-Image-2025-09-08-at-00-42-03.jpg" class="w-full h-full object-cover rounded-lg" alt="Studio Interior 4"><div class="gallery-overlay">Clean & Professional</div></div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- About Section -->
-        <section id="about" class="py-20 md:py-32 bg-white fade-in-section">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2">
-                        <img src="https://i.postimg.cc/brPSBkNL/Whats-App-Image-2025-09-07-at-20-53-12.jpg" alt="Owner Arun Kumar" class="rounded-lg shadow-xl w-full">
-                    </div>
-                    <div class="md:w-1/2 text-center md:text-left">
-                        <h2 class="section-title text-4xl mb-4">Meet The Owner</h2>
-                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Arun Kumar</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            With over 15 years of experience, Arun Kumar founded Fashion Hair Studio with a simple vision: to create a space where men can enjoy premium grooming services in a relaxed and friendly atmosphere. His passion for precision and dedication to his craft are evident in every cut and shave.
-                        </p>
-                        <a href="#contact" class="font-semibold text-brand hover:text-black">Book an Appointment <i class="fas fa-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="py-20 md:py-32 bg-dark text-white fade-in-section">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title text-4xl text-center mb-12 text-white">What Our Clients Say</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <!-- Testimonial 1 -->
-                    <div class="bg-gray-800 p-8 rounded-lg">
-                        <div class="text-center text-brand mb-4">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-gray-300 italic mb-6">"Best haircut I've had in Pune! Arun is a true artist. The attention to detail is unmatched. Highly recommended."</p>
-                        <p class="font-semibold text-lg text-brand">- Mudassir Husain</p>
-                    </div>
-                    <!-- Testimonial 2 -->
-                    <div class="bg-gray-800 p-8 rounded-lg">
-                        <div class="text-center text-brand mb-4">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-gray-300 italic mb-6">"The hot towel shave was incredibly relaxing. The studio has a great, clean vibe. I'll definitely be a regular here."</p>
-                        <p class="font-semibold text-lg text-brand">- Shivam Kadve</p>
-                    </div>
-                    <!-- Testimonial 3 -->
-                    <div class="bg-gray-800 p-8 rounded-lg">
-                        <div class="text-center text-brand mb-4">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-gray-300 italic mb-6">"A very professional and friendly place. Took the Royal Treatment package and felt completely refreshed. Worth every penny!"</p>
-                        <p class="font-semibold text-lg text-brand">- Rohit Nile</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 md:py-32 bg-white fade-in-section">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title text-4xl text-center mb-12">Get In Touch</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <!-- Contact Info -->
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-4 text-gray-900">Visit Our Studio</h3>
-                        <div class="space-y-4 text-lg text-gray-700">
-                            <p class="flex items-start">
-                                <i class="fas fa-map-marker-alt text-brand w-6 mr-3 mt-1"></i>
-                                <span>Bhand Building, Lavale Phata, Mulshi Rd, nearby Oxford Avenue, Pirangut, Pune, Maharashtra 412115</span>
-                            </p>
-                            <p class="flex items-center">
-                                <i class="fas fa-phone text-brand w-6 mr-3"></i>
-                                <a href="tel:+919548137737" class="hover:text-brand">+91 95481 37737</a>
-                            </p>
-                        </div>
-                        <h3 class="text-2xl font-semibold mt-8 mb-4 text-gray-900">Business Hours</h3>
-                        <div class="space-y-2 text-gray-700">
-                            <p><strong>Mon - Fri:</strong> 9:00 AM - 9:00 PM</p>
-                            <p><strong>Sat - Sun:</strong> 8:00 AM - 10:00 PM</p>
-                        </div>
-                    </div>
-                    <!-- Map -->
-                    <div>
-                        <iframe 
-                            class="w-full h-96 rounded-lg shadow-lg border"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.136453856885!2d73.7054703148927!3d18.5228519874075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb6a2e52e5d7%3A0x2e5d6e5f1b4a3b2!2sLavale%2C%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1678886453123!5m2!1sen!2sin" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                </div>
-                
-                <!-- NEW: Appointment Booking Form -->
-                <div class="mt-20 p-8 bg-gray-50 rounded-lg shadow-xl">
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Book Your Appointment</h3>
-                    <p class="text-gray-600 mb-8">Fill out the form below to get in touch with us and book your next visit.</p>
-                    
-                    <form id="bookingForm" action="#" method="POST" class="space-y-6">
-                        <!-- Full Name Fields -->
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div>
-                                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
-                                <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
-                            </div>
-                            <div>
-                                <label for="middleName" class="block text-sm font-medium text-gray-700 mb-1">Middle Name (optional)</label>
-                                <input type="text" id="middleName" name="middleName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
-                            </div>
-                            <div>
-                                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
-                                <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
-                            </div>
-                        </div>
-
-                        <!-- Contact Fields -->
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand">
-                        </div>
-
-                        <!-- Submit Button -->
-                        <button type="submit" class="btn-primary w-full py-3 rounded-lg shadow-md">
-                            Book Now
-                        </button>
-                    </form>
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-32 bg-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://i.postimg.cc/dtVdGR7j/Whats-App-Image-2025-09-08-at-00-42-02.jpg" alt="Interior of Fashion Hair Studio" class="rounded-lg shadow-xl w-full">
+                    </div>
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h2 class="section-title text-4xl mb-4">Welcome to the Studio</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Founded by Arun Kumar, Fashion Hair Studio is born from a passion for the fine art of barbering. We believe a haircut is more than a service—it's a craft. Our studio in Pirangut is a modern space dedicated to providing a premium grooming experience that leaves you looking sharp and feeling confident.
+                        </p>
+                        <a href="#contact" class="font-semibold text-brand hover:text-black">Find Us in Pirangut, Pune <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </div>
+        </section>
 
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-dark py-12 text-center text-gray-400">
-        <div class="container mx-auto px-6">
-            <div class="mb-4">
-                <a href="#" class="text-gray-400 hover:text-white mx-3"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white mx-3"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white mx-3"><i class="fab fa-whatsapp"></i></a>
-            </div>
-            <p>&copy; 2024 Fashion Hair Studio. All Rights Reserved.</p>
-        </div>
-    </footer>
-    
-    <!-- Message Modal -->
-    <div id="modal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center z-50">
-      <div class="bg-white rounded-lg p-6 max-w-sm mx-auto shadow-lg text-center">
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Thank you!</h3>
-        <p class="text-gray-600 mb-4">Your appointment request has been submitted.</p>
-        <button id="closeModal" class="px-4 py-2 bg-brand text-white rounded hover:bg-black transition duration-200">Close</button>
-      </div>
-    </div>
-
-    <script>
-        // Header scroll effect
-        const header = document.querySelector('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Mobile menu toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const headerBrandTitle = document.querySelector('header.scrolled .brand-title');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        const mobileLinks = document.querySelectorAll('#mobile-menu a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Scroll animation script
-        const sections = document.querySelectorAll('.fade-in-section');
-        const options = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    return;
-                }
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
-            });
-        }, options);
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-
-      // Form submission and modal script
-      const form = document.getElementById('bookingForm');
-      const modal = document.getElementById('modal');
-      const closeModalBtn = document.getElementById('closeModal');
-
-      form.addEventListener('submit', function(event) {
-        event.preventDefault(); 
+        <!-- Services Section -->
+        <section id="services" class="py-20 md:py-32 bg-gray-50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-4xl text-center mb-4">Signature Services</h2>
+                <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">Precision, quality, and style in every service we offer.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white rounded-lg text-center shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://i.postimg.cc/ZYVycfyD/Untitled-design-1.png" alt="Classic Haircut" class="w-full h-56 object-cover object-contain" style="object-fit: contain;">
+                        <div class="p-8">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-900">Classic Haircut</h3>
+                            <p class="text-gray-600 mb-4">A sharp, stylish cut tailored to your preference.</p>
+                            <p class="text-xl font-bold text-brand">₹200</p>
+                        </div>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-white rounded-lg text-center shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://i.postimg.cc/NFFJBr3s/berad.jpg" alt="Beard Trim & Shape" class="w-full h-56 object-cover object-contain" style="object-fit: contain;">
+                        <div class="p-8">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-900">Beard Sculpting</h3>
+                            <p class="text-gray-600 mb-4">Expert trimming and shaping for a perfect beard line.</p>
+                            <p class="text-xl font-bold text-brand">₹150</p>
+                        </div>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-white rounded-lg text-center shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://i.postimg.cc/mgLNDf4V/Whats-App-Image-2025-09-07-at-23-48-56.jpg" alt="Hot Towel Shave" class="w-full h-56 object-cover object-contain" style="object-fit: contain;">
+                        <div class="p-8">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-900">Hot Towel Shave</h3>
+                            <p class="text-gray-600 mb-4">A traditional shave for the closest, smoothest finish.</p>
+                            <p class="text-xl font-bold text-brand">₹180</p>
+                        </div>
+                    </div>
+                     <!-- Service Card 4 -->
+                    <div class="bg-white rounded-lg text-center shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://i.postimg.cc/YCHDzsHm/Whats-App-Image-2025-09-07-at-23-46-38.jpg" alt="Hair Coloring" class="w-full h-56 object-cover object-contain" style="object-fit: contain;">
+                        <div class="p-8">
+                            <h3 class="text-xl font-semibold mb-2">Hair Coloring</h3>
+                            <p class="text-gray-600 mb-4">Premium color services for a bold new look.</p>
+                            <p class="text-xl font-bold text-brand">From ₹500</p>
+                        </div>
+                    </div>
+                     <!-- Service Card 5 -->
+                    <div class="bg-white rounded-lg text-center shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://i.postimg.cc/NGnxpP1j/Whats-App-Image-2025-09-07-at-23-47-19-1.jpg" alt="Cleansing Facial" class="w-full h-56 object-cover object-contain" style="object-fit: contain;">
+                        <div class="p-8">
+                            <h3 class="text-xl font-semibold mb-2">Cleansing Facial</h3>
+                            <p class="text-gray-600 mb-4">Deep cleansing to refresh and rejuvenate your skin.</p>
+                            <p class="text-xl font-bold text-brand">₹800</p>
+                        </div>
+                    </div>
+                     <!-- Service Card 6 -->
+                    <div class="bg-white rounded-lg text-center shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://i.postimg.cc/T1vnvBQV/Whats-App-Image-2025-09-07-at-23-48-26.jpg" alt="Head Massage" class="w-full h-56 object-cover object-contain" style="object-fit: contain;">
+                        <div class="p-8">
+                            <h3 class="text-xl font-semibold mb-2">Head Massage</h3>
+                            <p class="text-gray-600 mb-4">A relaxing massage to relieve stress and tension.</p>
+                            <p class="text-xl font-bold text-brand">₹250</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        // You would typically handle form submission here (e.g., send data to a server)
-        // For this example, we'll just show the success modal.
-        
-        // Display the modal
-        modal.classList.remove('hidden');
-      });
+        <!-- Packages Section -->
+        <section id="packages" class="py-20 md:py-32 bg-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-4xl text-center mb-4">Grooming Packages</h2>
+                <p class="text-center text-gray-500 mb-12">Get the best value with our curated packages.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+                    <!-- Package Card 1 -->
+                    <div class="bg-gray-50 rounded-lg p-8 text-center border">
+                        <h3 class="text-2xl font-semibold mb-4">The Classic</h3>
+                        <p class="text-gray-500 mb-6">Haircut + Beard Trim</p>
+                        <p class="text-4xl font-bold text-gray-900 mb-6">₹300 <span class="text-lg text-gray-400 line-through">₹350</span></p>
+                        <a href="#contact" class="btn-primary py-2 px-8 rounded-full">Book Now</a>
+                    </div>
+                    <!-- Package Card 2 (Featured) -->
+                    <div class="bg-white rounded-lg p-10 text-center border-2 border-brand shadow-2xl">
+                        <h3 class="text-3xl font-serif font-bold mb-4">The Gentleman</h3>
+                        <p class="text-gray-500 mb-6">Haircut + Hot Towel Shave</p>
+                        <p class="text-5xl font-bold text-gray-900 mb-6">₹350 <span class="text-lg text-gray-400 line-through">₹380</span></p>
+                        <a href="#contact" class="btn-primary py-3 px-10 rounded-full text-lg">Book Now</a>
+                    </div>
+                    <!-- Package Card 3 -->
+                    <div class="bg-gray-50 rounded-lg p-8 text-center border">
+                        <h3 class="text-2xl font-semibold mb-4">The Royal Treatment</h3>
+                        <p class="text-gray-500 mb-6">Haircut + Beard Trim + Facial</p>
+                        <p class="text-4xl font-bold text-gray-900 mb-6">₹1100 <span class="text-lg text-gray-400 line-through">₹1250</span></p>
+                        <a href="#contact" class="btn-primary py-2 px-8 rounded-full">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      closeModalBtn.addEventListener('click', function() {
-        // Hide the modal
-        modal.classList.add('hidden');
-        // Reset the form after closing the modal
-        form.reset();
-      });
-      
-      modal.addEventListener('click', function(event) {
-        // Close modal if user clicks outside the modal content
-        if (event.target === modal) {
-          modal.classList.add('hidden');
-          form.reset();
-        }
-      });
-    </script>
+        <!-- Our Studio Gallery Section -->
+        <section id="studio" class="py-20 md:py-32 bg-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-4xl text-center mb-4">Our Studio</h2>
+                <p class="text-center text-gray-500 mb-12">Take a look inside our clean and modern space.</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="gallery-item rounded-lg"><img src="https://i.postimg.cc/Qx8g0Gz5/Whats-App-Image-2025-09-08-at-00-42-00.jpg" class="w-full h-full object-cover rounded-lg" alt="Studio Interior 1"><div class="gallery-overlay">Welcoming Space</div></div>
+                    <div class="gallery-item rounded-lg"><img src="https://i.postimg.cc/dtVdGR7j/Whats-App-Image-2025-09-08-at-00-42-02.jpg" class="w-full h-full object-cover rounded-lg" alt="Studio Interior 2"><div class="gallery-overlay">Styling Stations</div></div>
+                    <div class="gallery-item rounded-lg"><img src="https://i.postimg.cc/fR694688/Whats-App-Image-2025-09-08-at-00-42-05.jpg" class="w-full h-full object-cover rounded-lg" alt="Studio Interior 3"><div class="gallery-overlay">Comfortable Seating</div></div>
+                    <div class="gallery-item rounded-lg"><img src="https://i.postimg.cc/85GfcLQW/Whats-App-Image-2025-09-08-at-00-42-03.jpg" class="w-full h-full object-cover rounded-lg" alt="Studio Interior 4"><div class="gallery-overlay">Clean & Professional</div></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-32 bg-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://i.postimg.cc/brPSBkNL/Whats-App-Image-2025-09-07-at-20-53-12.jpg" alt="Owner Arun Kumar" class="rounded-lg shadow-xl w-full">
+                    </div>
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h2 class="section-title text-4xl mb-4">Meet The Owner</h2>
+                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Arun Kumar</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            With over 15 years of experience, Arun Kumar founded Fashion Hair Studio with a simple vision: to create a space where men can enjoy premium grooming services in a relaxed and friendly atmosphere. His passion for precision and dedication to his craft are evident in every cut and shave.
+                        </p>
+                        <a href="#contact" class="font-semibold text-brand hover:text-black">Book an Appointment <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 md:py-32 bg-dark text-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-4xl text-center mb-12 text-white">What Our Clients Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <div class="text-center text-brand mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-6">"Best haircut I've had in Pune! Arun is a true artist. The attention to detail is unmatched. Highly recommended."</p>
+                        <p class="font-semibold text-lg text-brand">- Mudassir Husain</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <div class="text-center text-brand mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-6">"The hot towel shave was incredibly relaxing. The studio has a great, clean vibe. I'll definitely be a regular here."</p>
+                        <p class="font-semibold text-lg text-brand">- Shivam Kadve</p>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <div class="text-center text-brand mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-6">"A very professional and friendly place. Took the Royal Treatment package and felt completely refreshed. Worth every penny!"</p>
+                        <p class="font-semibold text-lg text-brand">- Rohit Nile</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32 bg-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-4xl text-center mb-12">Get In Touch</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-900">Visit Our Studio</h3>
+                        <div class="space-y-4 text-lg text-gray-700">
+                            <p class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-brand w-6 mr-3 mt-1"></i>
+                                <span>Bhand Building, Lavale Phata, Mulshi Rd, nearby Oxford Avenue, Pirangut, Pune, Maharashtra 412115</span>
+                            </p>
+                            <p class="flex items-center">
+                                <i class="fas fa-phone text-brand w-6 mr-3"></i>
+                                <a href="tel:+919548137737" class="hover:text-brand">+91 95481 37737</a>
+                            </p>
+                        </div>
+                        <h3 class="text-2xl font-semibold mt-8 mb-4 text-gray-900">Business Hours</h3>
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>Mon - Fri:</strong> 9:00 AM - 9:00 PM</p>
+                            <p><strong>Sat - Sun:</strong> 8:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                    <!-- Map -->
+                    <div>
+                        <iframe 
+                            class="w-full h-96 rounded-lg shadow-lg border"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.136453856885!2d73.7054703148927!3d18.5228519874075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb6a2e52e5d7%3A0x2e5d6e5f1b4a3b2!2sLavale%2C%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1678886453123!5m2!1sen!2sin" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-12 text-center text-gray-400">
+        <div class="container mx-auto px-6">
+            <div class="mb-4">
+                <a href="#" class="text-gray-400 hover:text-white mx-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white mx-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white mx-3"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2024 Fashion Hair Studio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const headerBrandTitle = document.querySelector('header.scrolled .brand-title');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Scroll animation script
+        const sections = document.querySelectorAll('.fade-in-section');
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 
 </body>
 </html>
