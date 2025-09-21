@@ -367,21 +367,28 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <!-- Contact Info -->
 
-                    <!-- modify this form HTML and place wherever you want your form -->
-<form
-  action="https://formspree.io/f/xblanpjy"
-  method="POST"
->
+                    <form action="https://formspree.io/f/xblanpjy" method="POST">
   <label>
-    Your email:
-    <input type="email" name="email">
+    First Name:
+    <input type="text" name="first_name" required>
   </label>
   <label>
-    Your message:
+    Last Name:
+    <input type="text" name="last_name" required>
+  </label>
+  <label>
+    Email Address:
+    <input type="email" name="email" required>
+  </label>
+  <label>
+    Mobile Number:
+    <input type="tel" name="mobile_number" required>
+  </label>
+  <label>
+    Your Message:
     <textarea name="message"></textarea>
   </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
+  <button type="submit">Book Now</button>
 </form>
                     
                     <div>
