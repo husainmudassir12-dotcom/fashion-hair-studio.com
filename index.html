@@ -367,29 +367,33 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <!-- Contact Info -->
 
-                    <form action="https://formspree.io/f/xblanpjy" method="POST">
-  <label>
-    First Name:
-    <input type="text" name="first_name" required>
-  </label>
-  <label>
-    Last Name:
-    <input type="text" name="last_name" required>
-  </label>
-  <label>
-    Email Address:
-    <input type="email" name="email" required>
-  </label>
-  <label>
-    Mobile Number:
-    <input type="tel" name="mobile_number" required>
-  </label>
-  <label>
-    Your Message:
-    <textarea name="message"></textarea>
-  </label>
-  <button type="submit">Book Now</button>
-</form>
+                  <div class="booking-form-container">
+    <form action="https://formspree.io/f/xblanpjy" method="POST" class="booking-form">
+        <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required>
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="mobile_number">Mobile Number:</label>
+            <input type="tel" id="mobile_number" name="mobile_number" required>
+        </div>
+        <div class="form-group full-width">
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+        <div class="form-group full-width">
+            <button type="submit" class="submit-button">Book Now</button>
+        </div>
+    </form>
+</div>
                     
                     <div>
                         <h3 class="text-2xl font-semibold mb-4 text-gray-900">Visit Our Studio</h3>
