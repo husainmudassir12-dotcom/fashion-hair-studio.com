@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fashion Hair Studio - Premium Barber Shop in Pune</title>
-    <link rel="stylesheet" href="style.css">
     <meta name="description" content="Fashion Hair Studio by Arun Kumar in Pirangut, Pune. We offer premium hair cuts, beard styling, facials, and grooming packages.">
     <meta name="keywords" content="barber shop, hair studio, haircut, beard trim, grooming, Arun Kumar, Pirangut, Pune, Lavale Phata">
     
@@ -366,65 +365,64 @@
             <div class="container mx-auto px-6">
                 <h2 class="section-title text-4xl text-center mb-12">Get In Touch</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <!-- Contact Info -->
+                    <!-- Contact Info and Form -->
+                    <div>
+                         <div class="booking-form-container">
+                            <form action="https://formspree.io/f/xblanpjy" method="POST" class="booking-form">
+                                <h3 class="text-2xl font-semibold mb-4 text-gray-900">Book Your Appointment</h3>
+                                <p class="text-gray-600 mb-6">Fill out the form below and we'll get back to you to confirm your visit.</p>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div class="form-group">
+                                        <label for="first_name" class="block text-sm font-medium text-gray-700">First Name</label>
+                                        <input type="text" id="first_name" name="first_name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand focus:ring focus:ring-brand focus:ring-opacity-50">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="last_name" class="block text-sm font-medium text-gray-700">Last Name</label>
+                                        <input type="text" id="last_name" name="last_name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand focus:ring focus:ring-brand focus:ring-opacity-50">
+                                    </div>
+                                </div>
+                                <div class="form-group mt-6">
+                                    <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                    <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand focus:ring focus:ring-brand focus:ring-opacity-50">
+                                </div>
+                                <div class="form-group mt-6">
+                                    <label for="mobile_number" class="block text-sm font-medium text-gray-700">Mobile Number</label>
+                                    <input type="tel" id="mobile_number" name="mobile_number" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand focus:ring focus:ring-brand focus:ring-opacity-50">
+                                </div>
+                                <div class="form-group mt-6">
+                                    <label for="message" class="block text-sm font-medium text-gray-700">Your Message</label>
+                                    <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand focus:ring focus:ring-brand focus:ring-opacity-50"></textarea>
+                                </div>
+                                <div class="form-group mt-8">
+                                    <button type="submit" class="btn-primary w-full py-3 rounded-full">Book Now</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="mt-12">
+                             <h3 class="text-2xl font-semibold mb-4 text-gray-900">Visit Our Studio</h3>
+                             <div class="space-y-4 text-lg text-gray-700">
+                                 <p class="flex items-start">
+                                     <i class="fas fa-map-marker-alt text-brand w-6 mr-3 mt-1"></i>
+                                     <span>Bhand Building, Lavale Phata, Mulshi Rd, nearby Oxford Avenue, Pirangut, Pune, Maharashtra 412115</span>
+                                 </p>
+                                 <p class="flex items-center">
+                                     <i class="fas fa-phone text-brand w-6 mr-3"></i>
+                                     <a href="tel:+919548137737" class="hover:text-brand">+91 95481 37737</a>
+                                 </p>
+                             </div>
+                             <h3 class="text-2xl font-semibold mt-8 mb-4 text-gray-900">Business Hours</h3>
+                             <div class="space-y-2 text-gray-700">
+                                 <p><strong>Mon - Fri:</strong> 9:00 AM - 9:00 PM</p>
+                                 <p><strong>Sat - Sun:</strong> 8:00 AM - 10:00 PM</p>
+                             </div>
+                        </div>
+                    </div>
 
-                  <div class="booking-form-container">
-    <form action="https://formspree.io/f/xblanpjy" method="POST" class="booking-form">
-        <div class="form-group">
-            <label for="first_name">First Name:</label>
-            <input type="text" id="first_name" name="first_name" required>
-        </div>
-        <div class="form-group">
-            <label for="last_name">Last Name:</label>
-            <input type="text" id="last_name" name="last_name" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="mobile_number">Mobile Number:</label>
-            <input type="tel" id="mobile_number" name="mobile_number" required>
-        </div>
-        <div class="form-group full-width">
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="5"></textarea>
-        </div>
-        <div class="form-group full-width">
-            <button type="submit" class="submit-button">Book Now</button>
-        </div>
-    </form>
-</div>
-                    
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-4 text-gray-900">Visit Our Studio</h3>
-                        <div class="space-y-4 text-lg text-gray-700">
-                            <p class="flex items-start">
-                                <i class="fas fa-map-marker-alt text-brand w-6 mr-3 mt-1"></i>
-                                <span>Bhand Building, Lavale Phata, Mulshi Rd, nearby Oxford Avenue, Pirangut, Pune, Maharashtra 412115</span>
-                            </p>
-                            <p class="flex items-center">
-                                <i class="fas fa-phone text-brand w-6 mr-3"></i>
-                                <a href="tel:+919548137737" class="hover:text-brand">+91 95481 37737</a>
-                            </p>
-                        </div>
-                        <h3 class="text-2xl font-semibold mt-8 mb-4 text-gray-900">Business Hours</h3>
-                        <div class="space-y-2 text-gray-700">
-                            <p><strong>Mon - Fri:</strong> 9:00 AM - 9:00 PM</p>
-                            <p><strong>Sat - Sun:</strong> 8:00 AM - 10:00 PM</p>
-                        </div>
+                    <!-- New Image Section -->
+                    <div class="flex items-center justify-center">
+                        <img src="https://i.postimg.cc/Qx8g0Gz5/Whats-App-Image-2025-09-08-at-00-42-00.jpg" alt="A clean and modern barber studio" class="rounded-lg shadow-xl w-full h-auto object-cover">
                     </div>
-                    <!-- Map -->
-                    <div>
-                        <iframe 
-                            class="w-full h-96 rounded-lg shadow-lg border"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.136453856885!2d73.7054703148927!3d18.5228519874075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb6a2e52e5d7%3A0x2e5d6e5f1b4a3b2!2sLavale%2C%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1678886453123!5m2!1sen!2sin" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
+
                 </div>
             </div>
         </section>
